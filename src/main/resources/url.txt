@@ -1,0 +1,1 @@
+jdbc:sqlserver://193.124.67.40:1433;databaseName=AutoService

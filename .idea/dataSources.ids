@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="SQL Server (Microsoft) - AutoService@193.124.67.40" uuid="719deb25-5468-4239-ae7b-a579f69df074">
+    <database-info product="Microsoft SQL Server" version="12.00.2000" jdbc-version="4.0" driver-name="Microsoft JDBC Driver 4.0 for SQL Server" driver-version="4.0.2206.100">
+      <extra-name-characters>$#@</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <database-model serializer="dbm" rdbms="MSSQL" format-version="2.5">
+      <database id="1" name="AutoService">
+        <object-id>15</object-id>
+        <collation>Cyrillic_General_CI_AS</collation>
+      </database>
+      <schema id="2" parent="1" name="dbo">
+        <object-id>1</object-id>
+        <introspection-timestamp>2016-06-14.11:02:57.830</introspection-timestamp>
+      </schema>
+      <table id="3" parent="2" name="Auto">
+        <object-id>245575913</object-id>
+        <created-timestamp>2016-06-14.10:53:24.967</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.017</modified-timestamp>
+      </table>
+      <table id="4" parent="2" name="AutoDetailsProperties">
+        <object-id>277576027</object-id>
+        <created-timestamp>2016-06-14.10:53:24.983</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.030</modified-timestamp>
+      </table>
+      <table id="5" parent="2" name="Details">
+        <object-id>309576141</object-id>
+        <created-timestamp>2016-06-14.10:53:24.997</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.023</modified-timestamp>
+      </table>
+      <table id="6" parent="2" name="Properties">
+        <object-id>341576255</object-id>
+        <created-timestamp>2016-06-14.10:53:25.013</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.030</modified-timestamp>
+      </table>
+      <column id="7" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+        <sequence-identity>1(5)</sequence-identity>
+      </column>
+      <column id="8" parent="3" name="Name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="9" parent="3" name="Mark">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="10" parent="3" name="Model">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="11" parent="3" name="PK_Auto">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <clustering>1</clustering>
+        <position>1</position>
+      </index>
+      <key id="12" parent="3" name="PK_Auto">
+        <object-id>261575970</object-id>
+        <created-timestamp>2016-06-14.10:53:24.977</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:24.977</modified-timestamp>
+        <columns>id</columns>
+        <underlying-index>PK_Auto</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="13" parent="4" name="Auto_id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+      </column>
+      <column id="14" parent="4" name="Details_id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+      </column>
+      <column id="15" parent="4" name="Properties_id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+      </column>
+      <column id="16" parent="4" name="Values">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="17" parent="4" name="PK_AutoDetailsProperties">
+        <columns>Auto_id
+Details_id
+Properties_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <clustering>1</clustering>
+        <position>1</position>
+      </index>
+      <key id="18" parent="4" name="PK_AutoDetailsProperties">
+        <object-id>293576084</object-id>
+        <created-timestamp>2016-06-14.10:53:24.987</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:24.987</modified-timestamp>
+        <columns>Auto_id
+Details_id
+Properties_id</columns>
+        <underlying-index>PK_AutoDetailsProperties</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="4" name="FK_AutoDetailsProperties_Auto">
+        <object-id>373576369</object-id>
+        <created-timestamp>2016-06-14.10:53:25.017</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.017</modified-timestamp>
+        <columns>Auto_id</columns>
+        <ref-key>~.Auto.PK_Auto</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="20" parent="4" name="FK_AutoDetailsProperties_Details">
+        <object-id>389576426</object-id>
+        <created-timestamp>2016-06-14.10:53:25.023</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.023</modified-timestamp>
+        <columns>Details_id</columns>
+        <ref-key>~.Details.PK_Details</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="21" parent="4" name="FK_AutoDetailsProperties_Properties">
+        <object-id>405576483</object-id>
+        <created-timestamp>2016-06-14.10:53:25.030</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.030</modified-timestamp>
+        <columns>Properties_id</columns>
+        <ref-key>~.Properties.PK_Properties</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="22" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+        <sequence-identity>1(6)</sequence-identity>
+      </column>
+      <column id="23" parent="5" name="Name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="24" parent="5" name="PK_Details">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <clustering>1</clustering>
+        <position>1</position>
+      </index>
+      <key id="25" parent="5" name="PK_Details">
+        <object-id>325576198</object-id>
+        <created-timestamp>2016-06-14.10:53:24.997</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:24.997</modified-timestamp>
+        <columns>id</columns>
+        <underlying-index>PK_Details</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="26" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int</data-type>
+        <sequence-identity>1(14)</sequence-identity>
+      </column>
+      <column id="27" parent="6" name="Name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="28" parent="6" name="PK_Properties">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <clustering>1</clustering>
+        <position>1</position>
+      </index>
+      <key id="29" parent="6" name="PK_Properties">
+        <object-id>357576312</object-id>
+        <created-timestamp>2016-06-14.10:53:25.013</created-timestamp>
+        <modified-timestamp>2016-06-14.10:53:25.013</modified-timestamp>
+        <columns>id</columns>
+        <underlying-index>PK_Properties</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/java1/Data/Cars/CarDetails.java" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/java1/Data/Cars/CarPropertiesDetails.java" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/java1/Data/Cars/CarsRepository.java" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/java1/Data/Details.java" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/java1/Data/Properties.java" dialect="TSQL" />
+  </component>
+</project>
